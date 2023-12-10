@@ -1,0 +1,41 @@
+# Stage 1: Build the Flask app
+FROM python:3.9 as builder
+
+LABEL maintainer="Ícaro Ribeiro <icaroribeiro@hotmail.com>"
+
+WORKDIR /app
+
+COPY ./app .
+
+ENV POETRY_HOME="/opt/poetry" \
+    POETRY_VIRTUALENVS_IN_PROJECT=true \
+    POETRY_NO_INTERACTION=1
+
+ENV PATH="$POETRY_HOME/bin:$PATH"
+
+RUN apt-get update \
+    && apt-get install -y curl \
+    && curl -sSL https://install.python-poetry.org | python3 \
+    && chmod 755 ${POETRY_HOME}/bin/poetry
+
+
+RUN poetry install --only main --no-root --no-ansi
+
+# Stage 2: Create the production image
+FROM python:3.9-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PYTHONPATH="$PYTHONPATH:/app" \
+    PATH="/app/.venv/bin:$PATH"
+
+WORKDIR /app
+
+COPY --from=builder /app .
+
+RUN apt-get update \
+    && apt-get install -y libpq-dev gcc
+
+RUN . .venv/bin/activate
+
+CMD [ "sh", "-c", "python src/main.py" ]
