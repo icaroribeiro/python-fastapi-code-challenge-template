@@ -17,18 +17,6 @@ def event_loop():
     loop.close()
 
 
-# @pytest.fixture
-# async def app_client() -> AsyncClient:
-#     async with AsyncClient(app=app, base_url="http://test") as app_client:
-#         yield app_client
-
-
-# @pytest.fixture
-# def mocked_aioresponses():
-#     with aioresponses() as mocked_aioresponses:
-#         yield mocked_aioresponses
-
-
 def pytest_sessionfinish(session, exitstatus):
     loop = asyncio.get_event_loop()
     loop.close()

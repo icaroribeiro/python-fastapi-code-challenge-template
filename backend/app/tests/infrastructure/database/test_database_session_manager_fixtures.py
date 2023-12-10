@@ -1,9 +1,6 @@
 import pytest
 from sqlalchemy import delete
-
 from src import build_database_conn_string
-from src.domain.model.salesperson_transaction_type import SalespersonTransactionType
-from src.domain.model.transaction import TransactionType
 from src.infrastructure.database import Base
 from src.infrastructure.database.database_session_manager import DatabaseSessionManager
 

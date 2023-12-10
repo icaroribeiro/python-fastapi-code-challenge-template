@@ -1,0 +1,48 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="W605" />
+          <option value="E402" />
+          <option value="E501" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N802" />
+          <option value="N801" />
+          <option value="N813" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyShadowingBuiltinsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredNames">
+        <list>
+          <option value="id" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="sqlalchemy.orm.execute.assert_called_once_with" />
+          <option value="sqlalchemy.orm.add_all.assert_called_once_with" />
+          <option value="sqlalchemy.orm.commit.assert_called_once" />
+          <option value="src.utils.transaction_file_parser.process_file.assert_called_once_with" />
+          <option value="src.domain.repository.transaction.create_transactions.assert_called_once_with" />
+          <option value="jwt.encode" />
+          <option value="jwt.decode" />
+          <option value="sqlalchemy.engine.result.Result.__await__" />
+          <option value="src.controller.middlewares.jwt_auth_middleware.JWTAuthMiddleware.verify_jwt_signed_with_rs256_algorithm" />
+          <option value="src.infrastructure.jwt.jwt_auth.verify_jwt_signed_with_rs256_algorithm.assert_called_once_with" />
+          <option value="tuple.join" />
+          <option value="bool.__await__" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
