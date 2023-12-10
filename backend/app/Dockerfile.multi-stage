@@ -1,11 +1,11 @@
-# Stage 1: Build the Flask app
+# Stage 1: Build the FastAPI application
 FROM python:3.9 as builder
 
 LABEL maintainer="Ícaro Ribeiro <icaroribeiro@hotmail.com>"
 
 WORKDIR /app
 
-COPY ./app .
+COPY ./app/src .
 
 ENV POETRY_HOME="/opt/poetry" \
     POETRY_VIRTUALENVS_IN_PROJECT=true \
@@ -38,4 +38,4 @@ RUN apt-get update \
 
 RUN . .venv/bin/activate
 
-CMD [ "sh", "-c", "python src/main.py" ]
+CMD [ "sh", "-c", "python main.py" ]

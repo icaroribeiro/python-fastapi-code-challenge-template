@@ -1,8 +1,10 @@
 import pytest
 from sqlalchemy import delete
+
 from src import build_database_conn_string
 from src.infrastructure.database import Base
-from src.infrastructure.database.database_session_manager import DatabaseSessionManager
+from src.infrastructure.database.database_session_manager import \
+    DatabaseSessionManager
 
 
 class TestDatabaseSessionManagerFixtures:

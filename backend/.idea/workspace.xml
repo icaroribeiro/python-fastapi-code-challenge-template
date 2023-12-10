@@ -5,37 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b43b115-1c86-485b-8169-4fd0023b3916" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/app/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/application_container.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/application_container.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/controller/middlewares/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/controller/middlewares/jwt_auth_middleware.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/controller/model/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/controller/model/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/controller/model/health.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/controller/model/pagination.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/controller/model/salesperson_type.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/controller/model/transaction.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/controller/model/upload_file.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/controller/router/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/controller/router/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/controller/router/health.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/controller/router/transaction.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/domain/model/pagination.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/domain/model/salesperson_transaction_type.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/domain/model/token_schema.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/domain/model/transaction.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/domain/repository/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/domain/repository/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/domain/repository/transaction.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/infrastructure/application_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/infrastructure/application_settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/infrastructure/database/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/infrastructure/database/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/infrastructure/jwt/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/infrastructure/jwt/jwt_auth.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/infrastructure/jwt/jwt_payload.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/service/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/service/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/service/health.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/service/transaction.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/utils/datetime.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/utils/file_extension.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/utils/pagination.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

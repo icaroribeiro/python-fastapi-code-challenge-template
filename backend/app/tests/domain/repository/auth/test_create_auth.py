@@ -3,9 +3,8 @@ from sqlalchemy.orm import Session
 
 from src.domain.model.auth import Auth
 from src.domain.repository.auth import AuthRepository
-from tests.domain.repository.auth.test_auth_repository_fixtures import (
-    TestAuthRepositoryFixtures,
-)
+from tests.domain.repository.auth.test_auth_repository_fixtures import \
+    TestAuthRepositoryFixtures
 
 
 class TestCreateAuth(TestAuthRepositoryFixtures):

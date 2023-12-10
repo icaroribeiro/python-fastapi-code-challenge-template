@@ -1,8 +1,10 @@
 from dependency_injector.wiring import Provide, inject
 from fastapi import APIRouter, Depends, Request, status
 from fastapi.logger import logger
+
 from src.application_container import AppContainer
-from src.controller.model.auth import SignUpRequest, SignUpResponse, sign_up_responses
+from src.controller.model.auth import (SignUpRequest, SignUpResponse,
+                                       sign_up_responses)
 from src.domain.model.auth import Auth
 from src.service.auth import AuthService
 from src.utils.api_exceptions import ServerErrorException

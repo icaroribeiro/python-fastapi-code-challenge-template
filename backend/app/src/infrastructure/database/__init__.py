@@ -1,4 +1,5 @@
 from sqlalchemy.orm import declarative_base
+
 from src.infrastructure import application_settings
 
 Base = declarative_base()

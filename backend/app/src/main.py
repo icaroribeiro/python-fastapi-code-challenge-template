@@ -1,4 +1,5 @@
 import uvicorn
+
 from src import create_app
 from src.infrastructure import application_settings
 

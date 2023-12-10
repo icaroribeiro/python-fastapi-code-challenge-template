@@ -4,9 +4,8 @@ from sqlalchemy.orm import Session
 from src.domain.model.auth import Auth
 from src.domain.repository.auth import AuthRepository
 from tests.factory.auth_factory import AuthFactory
-from tests.infrastructure.database.test_database_session_manager_fixtures import (
-    TestDatabaseSessionManagerFixtures,
-)
+from tests.infrastructure.database.test_database_session_manager_fixtures import \
+    TestDatabaseSessionManagerFixtures
 
 
 class TestAuthRepositoryFixtures(TestDatabaseSessionManagerFixtures):

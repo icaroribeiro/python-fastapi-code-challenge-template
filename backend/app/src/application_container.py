@@ -1,6 +1,8 @@
 from dependency_injector import containers, providers
+
 from src.domain.repository.auth import AuthRepository
-from src.infrastructure.database.database_session_manager import DatabaseSessionManager
+from src.infrastructure.database.database_session_manager import \
+    DatabaseSessionManager
 from src.service.auth import AuthService
 
 
