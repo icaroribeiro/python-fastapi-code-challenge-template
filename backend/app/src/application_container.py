@@ -1,8 +1,6 @@
 from dependency_injector import containers, providers
-
 from src.domain.repository.auth import AuthRepository
-from src.infrastructure.database.database_session_manager import \
-    DatabaseSessionManager
+from src.infrastructure.database.database_session_manager import DatabaseSessionManager
 from src.service.auth import AuthService
 
 
@@ -15,7 +13,7 @@ class InfrastructureContainer(containers.DeclarativeContainer):
 
     database_session_manager = providers.Factory(
         DatabaseSessionManager,
-        conn_string=config.database_conn_string,
+        conn_string=config.db_conn_string,
     )
 
     session_factory = providers.Factory(
@@ -39,7 +37,6 @@ class ServiceContainer(containers.DeclarativeContainer):
 
     auth_service = providers.Factory(
         AuthService,
-        jwt_auth=infrastructure.jwt_auth,
         auth_repository=repository.auth_repository,
     )
 

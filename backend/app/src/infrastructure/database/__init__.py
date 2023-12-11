@@ -1,11 +1,10 @@
 from sqlalchemy.orm import declarative_base
-
 from src.infrastructure import application_settings
 
 Base = declarative_base()
 
 
-def build_database_conn_string() -> str:
+def build_db_conn_string() -> str:
     db_driver = application_settings.db_driver
     db_user = application_settings.db_user
     db_password = application_settings.db_password

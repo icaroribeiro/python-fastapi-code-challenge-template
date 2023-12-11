@@ -1,6 +1,5 @@
 from fastapi import status
 from pydantic import BaseModel, Field
-
 from src.controller.model.error import Error
 
 USERNAME_REGEX = r"^[A-Za-z0-9]{7,14}$"
@@ -22,8 +21,8 @@ PASSWORD_DESCRIPTION = (
 
 
 class UserCreds(BaseModel):
-    username: str = Field(description=USERNAME_DESCRIPTION)
-    password: str = Field(description=PASSWORD_DESCRIPTION)
+    username: str = Field(pattern=USERNAME_REGEX, description=USERNAME_DESCRIPTION)
+    password: str = Field(pattern=PASSWORD_REGEX, description=PASSWORD_DESCRIPTION)
 
 
 class SignUpRequest(UserCreds):

@@ -49,11 +49,14 @@ test = ["flake8 (>=6.1,<7.0)", "uvloop (>=0.15.3)"]
 
 [[package]]
 name = "bcrypt"
-version = "4.1.1"
+version = "3.2.2"
 description = "Modern password hashing for your software and your servers"
 category = "main"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.6"
+
+[package.dependencies]
+cffi = ">=1.1"
 
 [package.extras]
 tests = ["pytest (>=3.2.1,!=3.3.0)"]
@@ -97,6 +100,17 @@ description = "Python package for providing Mozilla's CA Bundle."
 category = "dev"
 optional = false
 python-versions = ">=3.6"
+
+[[package]]
+name = "cffi"
+version = "1.16.0"
+description = "Foreign Function Interface for Python calling C code."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+pycparser = "*"
 
 [[package]]
 name = "charset-normalizer"
@@ -165,12 +179,40 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "dnspython"
+version = "2.4.2"
+description = "DNS toolkit"
+category = "main"
+optional = false
+python-versions = ">=3.8,<4.0"
+
+[package.extras]
+doq = ["aioquic (>=0.9.20)"]
+dnssec = ["cryptography (>=2.6,<42.0)"]
+doh = ["h2 (>=4.1.0)", "httpcore (>=0.17.3)", "httpx (>=0.24.1)"]
+idna = ["idna (>=2.1,<4.0)"]
+trio = ["trio (>=0.14,<0.23)"]
+wmi = ["wmi (>=1.5.1,<2.0.0)"]
+
+[[package]]
 name = "docopt"
 version = "0.6.2"
 description = "Pythonic argument parser, that will make you smile"
 category = "dev"
 optional = false
 python-versions = "*"
+
+[[package]]
+name = "email-validator"
+version = "2.1.0.post1"
+description = "A robust email address syntax and deliverability validation library."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+dnspython = ">=2.0.0"
+idna = ">=2.0.0"
 
 [[package]]
 name = "exceptiongroup"
@@ -428,6 +470,14 @@ dev = ["pre-commit", "tox"]
 testing = ["pytest", "pytest-benchmark"]
 
 [[package]]
+name = "pycparser"
+version = "2.21"
+description = "C parser in Python"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[[package]]
 name = "pydantic"
 version = "2.5.2"
 description = "Data validation using Python type hints"
@@ -651,7 +701,7 @@ python-versions = ">=3.7"
 
 [[package]]
 name = "typing-extensions"
-version = "4.8.0"
+version = "4.9.0"
 description = "Backported and Experimental Type Hints for Python 3.8+"
 category = "main"
 optional = false
@@ -700,7 +750,7 @@ requests = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "bce94a7156005346643c9eec30588124f6e9d8c93c85158921c442eb9dbcbb0f"
+content-hash = "b50048cc3f1efe105e7e640532c7ae963f4f815fd4bd92ccab59f363d30ae055"
 
 [metadata.files]
 annotated-types = []
@@ -711,13 +761,16 @@ bcrypt = []
 black = []
 cerberus = []
 certifi = []
+cffi = []
 charset-normalizer = []
 click = []
 colorama = []
 coverage = []
 dependency-injector = []
 distlib = []
+dnspython = []
 docopt = []
+email-validator = []
 exceptiongroup = []
 factory-boy = []
 faker = []
@@ -739,6 +792,7 @@ pipreqs = []
 platformdirs = []
 plette = []
 pluggy = []
+pycparser = []
 pydantic = []
 pydantic-core = []
 pytest = []

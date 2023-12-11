@@ -41,6 +41,7 @@
           <option value="src.infrastructure.jwt.jwt_auth.verify_jwt_signed_with_rs256_algorithm.assert_called_once_with" />
           <option value="tuple.join" />
           <option value="bool.__await__" />
+          <option value="backend.app.src.domain.model.auth.src" />
         </list>
       </option>
     </inspection_tool>

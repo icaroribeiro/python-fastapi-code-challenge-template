@@ -16,6 +16,8 @@ format-app:
 
 setup-db:
 	cd ./db; \
+	find . -iname "*.sql" | xargs printf -- ' -f %s' | xargs -t psql -p 5432 -U postgres -d db
+
 
 run-app:
 	cd ./app; \
