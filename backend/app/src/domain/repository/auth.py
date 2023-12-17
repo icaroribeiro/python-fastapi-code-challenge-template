@@ -6,8 +6,11 @@ class AuthRepository:
         self.__session = session
 
     async def create_auth(self, auth: Auth) -> Auth:
-        async with self.__session() as session:
-            session.add(auth)
-            await session.commit()
-            await session.refresh(auth)
+        try:
+            self.__session.add(auth)
+            await self.__session.commit()
+            await self.__session.refresh(auth)
             return auth
+        except Exception:
+            await self.__session.rollback()
+            raise

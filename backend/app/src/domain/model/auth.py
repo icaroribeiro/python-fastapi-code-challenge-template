@@ -3,8 +3,7 @@ from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy_serializer import SerializerMixin
 
 from src.domain.model import Default
-
-from infrastructure.database import Base
+from src.infrastructure.database import Base
 
 
 class Auth(Default, Base, SerializerMixin):

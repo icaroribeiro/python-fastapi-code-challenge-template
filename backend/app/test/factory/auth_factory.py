@@ -1,16 +1,14 @@
 from datetime import datetime
 
-import factory
-from factory import BUILD_STRATEGY, LazyAttribute
+from factory import LazyAttribute, BUILD_STRATEGY, Factory
 from faker import Faker
-
 from src.domain.model.auth import Auth
 
 fake = Faker()
 current_datetime = datetime.utcnow()
 
 
-class AuthFactory(factory.Factory):
+class AuthFactory(Factory):
     class Meta:
         strategy = BUILD_STRATEGY
         model = Auth

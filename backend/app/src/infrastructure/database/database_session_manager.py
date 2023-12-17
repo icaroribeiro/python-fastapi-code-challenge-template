@@ -48,7 +48,3 @@ class DatabaseSessionManager:
                 raise
             finally:
                 await session.close()
-
-    @staticmethod
-    def session_factory(database_session_manager: "DatabaseSessionManager"):
-        return database_session_manager.session

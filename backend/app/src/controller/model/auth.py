@@ -4,7 +4,7 @@ from src.controller.model.error import Error
 
 USERNAME_REGEX = r"^[A-Za-z0-9]{7,14}$"
 
-PASSWORD_REGEX = r"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
+PASSWORD_REGEX = r"^(?:.*?[A-Z])(?:.*?[a-z])(?:.*?[0-9])(?:.*?[#?!@$%^&*-]).{8,}$"
 
 USERNAME_DESCRIPTION = (
     "It must have minimum 7 and maximum 15 characters in length. "
@@ -22,7 +22,7 @@ PASSWORD_DESCRIPTION = (
 
 class UserCreds(BaseModel):
     username: str = Field(pattern=USERNAME_REGEX, description=USERNAME_DESCRIPTION)
-    password: str = Field(pattern=PASSWORD_REGEX, description=PASSWORD_DESCRIPTION)
+    password: str = Field(description=PASSWORD_DESCRIPTION)
 
 
 class SignUpRequest(UserCreds):

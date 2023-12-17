@@ -1,7 +1,14 @@
 from dependency_injector import containers, providers
+
 from src.domain.repository.auth import AuthRepository
 from src.infrastructure.database.database_session_manager import DatabaseSessionManager
 from src.service.auth import AuthService
+
+
+async def session_factory(conn_string: str):
+    database_session_manager = DatabaseSessionManager(conn_string=conn_string)
+    async with database_session_manager.session() as session:
+        yield session
 
 
 class Core(containers.DeclarativeContainer):
@@ -11,23 +18,13 @@ class Core(containers.DeclarativeContainer):
 class InfrastructureContainer(containers.DeclarativeContainer):
     config = providers.Configuration()
 
-    database_session_manager = providers.Factory(
-        DatabaseSessionManager,
-        conn_string=config.db_conn_string,
-    )
-
-    session_factory = providers.Factory(
-        DatabaseSessionManager.session_factory,
-        database_session_manager=database_session_manager,
-    )
+    session = providers.Resource(session_factory, conn_string=config.db_conn_string)
 
 
 class RepositoryContainer(containers.DeclarativeContainer):
     infrastructure = providers.DependenciesContainer()
 
-    auth_repository = providers.Factory(
-        AuthRepository, session=infrastructure.session_factory
-    )
+    auth_repository = providers.Factory(AuthRepository, session=infrastructure.session)
 
 
 class ServiceContainer(containers.DeclarativeContainer):
@@ -42,7 +39,9 @@ class ServiceContainer(containers.DeclarativeContainer):
 
 
 class AppContainer(containers.DeclarativeContainer):
-    infrastructure = providers.Container(InfrastructureContainer, config=Core.config)
+    config = Core.config
+
+    infrastructure = providers.Container(InfrastructureContainer, config=config)
 
     repository = providers.Container(RepositoryContainer, infrastructure=infrastructure)
 

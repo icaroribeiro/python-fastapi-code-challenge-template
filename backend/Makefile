@@ -16,7 +16,20 @@ format-app:
 
 setup-db:
 	cd ./db; \
-	find . -iname "*.sql" | xargs printf -- ' -f %s' | xargs -t psql -p 5432 -U postgres -d db
+	find . -iname "*.sql" | xargs printf -- ' -f %s' | xargs -t psql -p 5433 -U postgres -d db
+
+
+start-dependencies:
+	cd ./db; \
+	docker build -t db-image --no-cache -f Dockerfile .; \
+	docker run --name db-container --env-file .env -d -p 5433:5432 -v db-data:/var/lib/postgresql/data --restart on-failure db-image
+
+
+finish-dependencies:
+	docker stop db-container; \
+	docker rm db-container; \
+	docker volume rm db-data; \
+	docker rmi db-image
 
 
 run-app:
@@ -25,58 +38,58 @@ run-app:
 	poetry run python src/main.py
 
 
-unittest-app:
+test-app:
 	cd ./app; \
 	. ./setup_env.sh; \
-    poetry run pytest --no-cov-on-fail --cov-fail-under=50 -v tests
+    poetry run pytest --no-cov-on-fail --cov-fail-under=50 -v test
 
 
-unittest-coverage-app:
+check-app-coverage:
 	cd ./app; \
 	. ./setup_env.sh; \
-	poetry run pytest --cov=src --no-cov-on-fail -v tests
+	poetry run pytest --cov=src --no-cov-on-fail -v test
 
 
 #
 # Dockerized Backend application
 # Set of tasks related to the testing of dockerized backend application.
 #
-start-app-dependencies:
+start-dockerized-app-dependencies:
 	cd ./db; \
-	docker network create testapp_network; \
-	docker build -t postgresdb --no-cache -f Dockerfile .; \
-	docker run --name postgresdb_container --env-file .env -d -p 5433:5432 -v postgresdb-data:/var/lib/postgresql/data --restart on-failure postgresdb
-	docker network connect testapp_network postgresdb_container
+	docker network create app-db-network; \
+	docker build -t db-image --no-cache -f Dockerfile .; \
+	docker run --name db-container --env-file .env -d -p 5433:5432 -v db-data:/var/lib/postgresql/data --restart on-failure db-image
+	docker network connect app-db-network db-container
 
 
-finish-app-dependencies:
-	docker network disconnect testapp_network postgresdb_container; \
-	docker stop postgresdb_container; \
-	docker rm postgresdb_container; \
-	docker volume rm postgresdb-data; \
-	docker rmi postgresdb; \
-	docker network rm testapp_network
+finish-dockerized-app-dependencies:
+	docker network disconnect app-db-network db-container; \
+	docker stop db-container; \
+	docker rm db-container; \
+	docker volume rm db-data; \
+	docker rmi db-image; \
+	docker network rm app-db-network
 
 
-init-dockerized-app:
+run-dockerized-app:
 	cd ./app; \
-	docker build -t backend -f Dockerfile .; \
-	docker run --name backend_container --env-file .env -d -p 5000:5000 --restart on-failure backend; \
-	docker network connect testapp_network backend_container
+	docker build -t app-image -f Dockerfile .; \
+	docker run --name app-container --env-file .env -d -p 5000:5000 --restart on-failure app-image; \
+	docker network connect app-db-network app-container
 
 
 destroy-dockerized-app:
-	docker network disconnect testapp_network backend_container; \
-	docker stop backend_container; \
-	docker rm backend_container; \
-	docker rmi backend
+	docker network disconnect app-db-network app-container; \
+	docker stop app-container; \
+	docker rm app-container; \
+	docker rmi app-image
 
 
-unittest-dockerized-app:
+test-dockerized-app:
 	cd ./app; \
-	docker exec --env-file .env backend_container poetry run pytest --no-cov-on-fail --cov-fail-under=50 -v tests
+	docker exec --env-file .env app-container poetry run pytest --no-cov-on-fail --cov-fail-under=50 -v test
 
 
-unittest-coverage-dockerized-app:
+check-dockerized-app-coverage:
 	cd ./app; \
-	docker exec --env-file .env backend_container poetry run pytest --cov=src --no-cov-on-fail -v tests
+	docker exec --env-file .env app-container poetry run pytest --cov=src --no-cov-on-fail -v test

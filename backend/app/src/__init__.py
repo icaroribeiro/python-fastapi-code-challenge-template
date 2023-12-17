@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.exceptions import RequestValidationError
+
 from src.application_container import AppContainer, Core
 from src.controller.router import auth as auth_router_module
 from src.controller.router.auth import auth_router, auth_tag
@@ -13,8 +14,8 @@ from src.utils.api_exceptions import (
 
 
 def create_app() -> FastAPI:
-    db_conn_str = build_db_conn_string()
-    Core.config.override({"db_conn_string": db_conn_str})
+    db_conn_string = build_db_conn_string()
+    Core.config.override({"db_conn_string": db_conn_string})
 
     container = AppContainer()
     container.wire(modules=[auth_router_module])

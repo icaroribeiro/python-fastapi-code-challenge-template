@@ -3,8 +3,8 @@ from sqlalchemy.orm import Session
 
 from src.domain.model.auth import Auth
 from src.domain.repository.auth import AuthRepository
-from tests.factory.auth_factory import AuthFactory
-from tests.infrastructure.database.test_database_session_manager_fixtures import \
+from test.factory.auth_factory import AuthFactory
+from test.infrastructure.database.test_database_session_manager_fixtures import \
     TestDatabaseSessionManagerFixtures
 
 
@@ -14,5 +14,5 @@ class TestAuthRepositoryFixtures(TestDatabaseSessionManagerFixtures):
         return AuthFactory()
 
     @pytest.fixture
-    def auth_repository(self, session: Session) -> AuthRepository:
+    def auth_repository(self, session) -> AuthRepository:
         return AuthRepository(session=session)

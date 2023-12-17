@@ -5,32 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbcc6e08-ecb9-4b0f-a95a-40f203ced3b8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/new-python-code-challenge-template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/new-python-code-challenge-template.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/app.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/watcherTasks.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/app.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup_env.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup_env.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application_container.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/application_container.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/model/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/model/auth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/model/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/model/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infrastructure/database/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/infrastructure/database/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/repository/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/repository/auth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/infrastructure/database/database_session_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/infrastructure/database/database_session_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/infrastructure/database/test_database_session_manager_fixtures.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/infrastructure/database/test_database_session_manager_fixtures.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/controller/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/controller/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/controller/test_controller_fixtures.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/controller/test_controller_fixtures.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/domain/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/domain/repository/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/repository/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/domain/repository/auth/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/repository/auth/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/domain/repository/auth/test_auth_repository_fixtures.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/repository/auth/test_auth_repository_fixtures.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/domain/repository/auth/test_create_auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/repository/auth/test_create_auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/factory/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/infrastructure/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/factory/auth_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/factory/auth_factory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/infrastructure/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/infrastructure/database/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/infrastructure/database/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/service/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/infrastructure/database/test_database_session_manager_fixtures.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/infrastructure/database/test_database_session_manager_fixtures.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/service/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/service/auth/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/service/auth/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/service/auth/test_auth_service_fixtures.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/service/auth/test_auth_service_fixtures.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/service/auth/test_save_auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/service/auth/test_save_auth.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,10 +62,72 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Python/workspace/src/github.com/icaroribeiro/new-python-code-challenge-template",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+    "last_opened_file_path": "C:/Python/workspace/src/github.com/icaroribeiro/watchers.xml",
+    "settings.editor.selected.configurable": "watcher.settings"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Python\workspace\src\github.com\icaroribeiro\new-python-code-challenge-template\backend\app\test\factory" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.pytest for domain.repository.auth.test_create_auth.TestCreateAuth.test_should_return_auth_when_auth_is_registered">
+    <configuration name="pytest for domain.repository.auth.test_create_auth.TestCreateAuth" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;domain.repository.auth.test_create_auth.TestCreateAuth&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for domain.repository.auth.test_create_auth.TestCreateAuth.test_should_return_auth_when_auth_is_registered" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;domain.repository.auth.test_create_auth.TestCreateAuth.test_should_return_auth_when_auth_is_registered&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for service.auth.test_save_auth.TestSaveAuth" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;service.auth.test_save_auth.TestSaveAuth&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.pytest for domain.repository.auth.test_create_auth.TestCreateAuth.test_should_return_auth_when_auth_is_registered" />
+        <item itemvalue="Python tests.pytest for domain.repository.auth.test_create_auth.TestCreateAuth" />
+        <item itemvalue="Python tests.pytest for service.auth.test_save_auth.TestSaveAuth" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

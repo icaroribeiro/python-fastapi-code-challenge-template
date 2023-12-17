@@ -1,9 +1,8 @@
-from faker import Faker
+from test.service.auth.test_auth_service_fixtures import TestAuthServiceFixtures
 
+from faker import Faker
 from src.domain.repository.auth import AuthRepository
 from src.service.auth import AuthService
-from tests.src.service.auth.test_auth_service_fixtures import \
-    TestAuthServiceFixtures
 
 
 class TestSaveAuth(TestAuthServiceFixtures):
