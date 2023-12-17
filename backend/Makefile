@@ -22,13 +22,13 @@ setup-db:
 start-dependencies:
 	cd ./db; \
 	docker build -t db-image --no-cache -f Dockerfile .; \
-	docker run --name db-container --env-file .env -d -p 5433:5432 -v db-data:/var/lib/postgresql/data --restart on-failure db-image
+	docker run --name db-container --env-file .env -d -p 5433:5432 -v db-container-data:/var/lib/postgresql/data --restart on-failure db-image
 
 
 finish-dependencies:
 	docker stop db-container; \
 	docker rm db-container; \
-	docker volume rm db-data; \
+	docker volume rm db-container-data; \
 	docker rmi db-image
 
 
@@ -41,7 +41,7 @@ run-app:
 test-app:
 	cd ./app; \
 	. ./setup_env.sh; \
-    poetry run pytest --no-cov-on-fail --cov-fail-under=50 -v test
+	poetry run pytest --no-cov-on-fail --cov-fail-under=50 -v test
 
 
 check-app-coverage:
@@ -58,7 +58,7 @@ start-dockerized-app-dependencies:
 	cd ./db; \
 	docker network create app-db-network; \
 	docker build -t db-image --no-cache -f Dockerfile .; \
-	docker run --name db-container --env-file .env -d -p 5433:5432 -v db-data:/var/lib/postgresql/data --restart on-failure db-image
+	docker run --name db-container --env-file .env -d -p 5433:5432 -v db-container-data:/var/lib/postgresql/data --restart on-failure db-image
 	docker network connect app-db-network db-container
 
 
@@ -66,7 +66,7 @@ finish-dockerized-app-dependencies:
 	docker network disconnect app-db-network db-container; \
 	docker stop db-container; \
 	docker rm db-container; \
-	docker volume rm db-data; \
+	docker volume rm db-container-data; \
 	docker rmi db-image; \
 	docker network rm app-db-network
 
