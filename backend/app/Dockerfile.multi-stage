@@ -5,7 +5,7 @@ LABEL maintainer="Ícaro Ribeiro <icaroribeiro@hotmail.com>"
 
 WORKDIR /app
 
-COPY ./app/src .
+COPY . .
 
 ENV POETRY_HOME="/opt/poetry" \
     POETRY_VIRTUALENVS_IN_PROJECT=true \
@@ -38,4 +38,4 @@ RUN apt-get update \
 
 RUN . .venv/bin/activate
 
-CMD [ "sh", "-c", "python main.py" ]
+CMD [ "sh", "-c", "python src/main.py" ]

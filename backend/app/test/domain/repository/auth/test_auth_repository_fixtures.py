@@ -1,11 +1,13 @@
+from test.factory.auth_factory import AuthFactory
+from test.infrastructure.database.test_database_session_manager_fixtures import (
+    TestDatabaseSessionManagerFixtures,
+)
+
 import pytest
-from sqlalchemy.orm import Session
+from sqlalchemy.ext.asyncio import AsyncSession
 
 from src.domain.model.auth import Auth
 from src.domain.repository.auth import AuthRepository
-from test.factory.auth_factory import AuthFactory
-from test.infrastructure.database.test_database_session_manager_fixtures import \
-    TestDatabaseSessionManagerFixtures
 
 
 class TestAuthRepositoryFixtures(TestDatabaseSessionManagerFixtures):
@@ -14,5 +16,5 @@ class TestAuthRepositoryFixtures(TestDatabaseSessionManagerFixtures):
         return AuthFactory()
 
     @pytest.fixture
-    def auth_repository(self, session) -> AuthRepository:
+    def auth_repository(self, session: AsyncSession) -> AuthRepository:
         return AuthRepository(session=session)

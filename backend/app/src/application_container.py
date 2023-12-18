@@ -3,6 +3,7 @@ from dependency_injector import containers, providers
 from src.domain.repository.auth import AuthRepository
 from src.infrastructure.database.database_session_manager import DatabaseSessionManager
 from src.service.auth import AuthService
+from src.service.health import HealthService
 
 
 async def session_factory(conn_string: str):
@@ -31,6 +32,8 @@ class ServiceContainer(containers.DeclarativeContainer):
     infrastructure = providers.DependenciesContainer()
 
     repository = providers.DependenciesContainer()
+
+    health_service = providers.Factory(HealthService, session=infrastructure.session)
 
     auth_service = providers.Factory(
         AuthService,

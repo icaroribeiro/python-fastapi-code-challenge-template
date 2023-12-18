@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-  backend:
-    container_name: backend_container
+  backend-app:
+    container_name: backend-app-container
     build:
       context: ./backend/app
       dockerfile: Dockerfile.multi-stage
@@ -12,10 +12,10 @@ services:
     ports:
       - "5000:5000"
     depends_on:
-      - postgres
+      - db
 
-  postgres:
-    container_name: postgresdb_container
+  db:
+    container_name: db-container
     build:
       context: ./backend/db
       dockerfile: Dockerfile
@@ -25,7 +25,7 @@ services:
     ports:
       - "5433:5432"
     volumes:
-      - postgresdb-data:/var/lib/postgresql/data
+      - db-container-data:/var/lib/postgresql/data
 
 volumes:
-  postgresdb-data:
+  db-container-data:

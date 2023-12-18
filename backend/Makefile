@@ -62,15 +62,6 @@ start-dockerized-app-dependencies:
 	docker network connect app-db-network db-container
 
 
-finish-dockerized-app-dependencies:
-	docker network disconnect app-db-network db-container; \
-	docker stop db-container; \
-	docker rm db-container; \
-	docker volume rm db-container-data; \
-	docker rmi db-image; \
-	docker network rm app-db-network
-
-
 run-dockerized-app:
 	cd ./app; \
 	docker build -t app-image -f Dockerfile .; \
@@ -83,6 +74,15 @@ destroy-dockerized-app:
 	docker stop app-container; \
 	docker rm app-container; \
 	docker rmi app-image
+
+
+finish-dockerized-app-dependencies:
+	docker network disconnect app-db-network db-container; \
+	docker stop db-container; \
+	docker rm db-container; \
+	docker volume rm db-container-data; \
+	docker rmi db-image; \
+	docker network rm app-db-network
 
 
 test-dockerized-app:

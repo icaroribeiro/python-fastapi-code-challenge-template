@@ -18,6 +18,6 @@ RUN apt-get update \
     && curl -sSL https://install.python-poetry.org | python3 \
     && chmod 755 ${POETRY_HOME}/bin/poetry
 
-RUN poetry install --only main --no-root --no-ansi
+RUN poetry install --no-root --no-ansi
 
-CMD [ "sh", "-c", "python src/main.py" ]
+CMD [ "sh", "-c", "poetry run python src/main.py" ]

@@ -7,7 +7,7 @@ from src.infrastructure.database.database_session_manager import DatabaseSession
 
 
 class TestDatabaseSessionManagerFixtures:
-    @pytest.fixture()
+    @pytest.fixture
     async def database_session_manager(self):
         conn_string = build_db_conn_string()
         database_session_manager = DatabaseSessionManager(conn_string=conn_string)
@@ -17,7 +17,7 @@ class TestDatabaseSessionManagerFixtures:
                 await connection.execute(delete(table))
         await database_session_manager.close()
 
-    @pytest.fixture()
+    @pytest.fixture
     async def session(self, database_session_manager: DatabaseSessionManager):
         async with database_session_manager.session() as session:
             yield session
