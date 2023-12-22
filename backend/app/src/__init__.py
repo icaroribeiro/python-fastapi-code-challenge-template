@@ -6,7 +6,6 @@ from src.controller.router import auth as auth_router_module
 from src.controller.router import health as health_router_module
 from src.controller.router.auth import auth_router, auth_tag
 from src.controller.router.health import health_router, health_tag
-from src.infrastructure import application_settings
 from src.infrastructure.database import build_db_conn_string
 from src.utils.api_exceptions import (
     ApiException,
