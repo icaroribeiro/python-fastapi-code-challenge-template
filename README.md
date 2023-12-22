@@ -1,2 +1,2 @@
-# new-python-code-challenge-template
-New Python Code Challenge Template
+# python-fastapi-code-challenge-template
+Python FastAPI Code Challenge Template
