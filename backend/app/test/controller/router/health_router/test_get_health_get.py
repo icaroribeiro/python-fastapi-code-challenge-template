@@ -1,12 +1,11 @@
-from test.controller.router.health_router.test_health_router_fixtures import (
-    TestHealthRouterFixtures,
-)
+from test.controller.router.health_router.test_health_router_fixtures import \
+    TestHealthRouterFixtures
 
 import pytest
 from fastapi import status
 from fastapi.encoders import jsonable_encoder
 from httpx import AsyncClient
-from src.controller.dto.health_dto import HealthResponseDto
+from src.controller.dto.health_response_dto import HealthResponseDto
 
 
 class TestGetHealthGet(TestHealthRouterFixtures):

@@ -1,8 +1,6 @@
 import re
 
-from fastapi import status
 from pydantic import BaseModel, Field, field_validator
-from src.controller.dto.error_dto import ErrorDto
 
 USERNAME_REGEX = r"^[A-Za-z0-9]{7,14}$"
 
@@ -22,7 +20,7 @@ PASSWORD_DESCRIPTION = (
 )
 
 
-class UserCredsDto(BaseModel):
+class UserCredentialsDto(BaseModel):
     username: str = Field(description=USERNAME_DESCRIPTION)
     password: str = Field(description=PASSWORD_DESCRIPTION)
 
@@ -41,28 +39,3 @@ class UserCredsDto(BaseModel):
         if not regex_for_password.match(password):
             raise ValueError("invalid password")
         return password
-
-
-class SignUpRequestDto(UserCredsDto):
-    pass
-
-
-class SignUpResponseDto(BaseModel):
-    ok: bool
-
-
-sign_up_responses = {
-    status.HTTP_201_CREATED: {
-        "model": SignUpResponseDto,
-        "description": "Sign up successfully executed",
-    },
-    status.HTTP_400_BAD_REQUEST: {
-        "model": ErrorDto,
-    },
-    status.HTTP_422_UNPROCESSABLE_ENTITY: {
-        "model": ErrorDto,
-    },
-    status.HTTP_500_INTERNAL_SERVER_ERROR: {
-        "model": ErrorDto,
-    },
-}

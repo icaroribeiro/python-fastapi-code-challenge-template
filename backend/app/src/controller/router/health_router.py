@@ -3,8 +3,10 @@ import logging
 from dependency_injector.wiring import Provide, inject
 from fastapi import APIRouter, Depends
 from src.application_container import AppContainer
-from src.controller.dto.health_dto import (HealthResponseDto,
-                                           get_health_responses)
+from src.controller.dto.health_response_dto import (
+    HealthResponseDto,
+    get_health_responses,
+)
 from src.service.health_service import HealthService
 from src.utils.api_exceptions import ServerErrorException
 
