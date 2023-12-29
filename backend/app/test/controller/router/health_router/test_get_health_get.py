@@ -1,4 +1,4 @@
-from test.controller.router.health.test_health_router_fixtures import (
+from test.controller.router.health_router.test_health_router_fixtures import (
     TestHealthRouterFixtures,
 )
 
@@ -6,8 +6,7 @@ import pytest
 from fastapi import status
 from fastapi.encoders import jsonable_encoder
 from httpx import AsyncClient
-
-from src.controller.model.health import HealthResponse
+from src.controller.dto.health_dto import HealthResponseDto
 
 
 class TestGetHealthGet(TestHealthRouterFixtures):
@@ -21,7 +20,7 @@ class TestGetHealthGet(TestHealthRouterFixtures):
         endpoint: str,
     ):
         expected_status_code = status.HTTP_200_OK
-        expected_json_response = HealthResponse(ok=True)
+        expected_json_response = HealthResponseDto(ok=True)
 
         response = await app_client.get(url=endpoint)
 

@@ -1,5 +1,5 @@
 from src.domain.model.auth import Auth
-from src.domain.repository.auth import AuthRepository
+from src.domain.repository.auth_repository import AuthRepository
 
 
 class AuthService:

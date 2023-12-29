@@ -1,6 +1,8 @@
-from test.service.health.test_health_service_fixtures import TestHealthServiceFixtures
+from test.service.health_service.test_health_service_fixtures import (
+    TestHealthServiceFixtures,
+)
 
-from src.service.health import HealthService
+from src.service.health_service import HealthService
 
 
 class TestCheckHealth(TestHealthServiceFixtures):

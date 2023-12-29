@@ -1,12 +1,14 @@
 from dependency_injector.wiring import Provide, inject
-from fastapi import APIRouter, Depends, Request, status
+from fastapi import APIRouter, Depends, status
 from fastapi.logger import logger
-
 from src.application_container import AppContainer
-from src.controller.model.auth import (SignUpRequest, SignUpResponse,
-                                       sign_up_responses)
+from src.controller.dto.auth_dto import (
+    SignUpRequestDto,
+    SignUpResponseDto,
+    sign_up_responses,
+)
 from src.domain.model.auth import Auth
-from src.service.auth import AuthService
+from src.service.auth_service import AuthService
 from src.utils.api_exceptions import ServerErrorException
 from src.utils.security import get_hashed_password
 
@@ -23,7 +25,7 @@ auth_router = APIRouter(prefix="/auth", tags=["auth"])
 )
 @inject
 async def sign_up(
-    sign_up_request: SignUpRequest,
+    sign_up_request: SignUpRequestDto,
     auth_service: AuthService = Depends(Provide[AppContainer.service.auth_service]),
 ):
     try:
@@ -35,4 +37,4 @@ async def sign_up(
         logger.error(f"Failed to sign up: ${str(ex)}")
         raise ServerErrorException(extra="Sign up failed")
 
-    return SignUpResponse(ok=True)
+    return SignUpResponseDto(ok=True)

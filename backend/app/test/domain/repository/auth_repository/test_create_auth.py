@@ -1,11 +1,10 @@
-from test.domain.repository.auth.test_auth_repository_fixtures import (
+from test.domain.repository.auth_repository.test_auth_repository_fixtures import (
     TestAuthRepositoryFixtures,
 )
 
 from faker import Faker
-from sqlalchemy.orm import Session
 from src.domain.model.auth import Auth
-from src.domain.repository.auth import AuthRepository
+from src.domain.repository.auth_repository import AuthRepository
 
 
 class TestCreateAuth(TestAuthRepositoryFixtures):

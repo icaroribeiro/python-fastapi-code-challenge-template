@@ -4,8 +4,7 @@ from test.infrastructure.database.test_database_session_manager_fixtures import 
 
 import pytest
 from sqlalchemy.ext.asyncio import AsyncSession
-
-from src.service.health import HealthService
+from src.service.health_service import HealthService
 
 
 class TestHealthServiceFixtures(TestDatabaseSessionManagerFixtures):

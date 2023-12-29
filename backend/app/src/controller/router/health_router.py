@@ -2,10 +2,10 @@ import logging
 
 from dependency_injector.wiring import Provide, inject
 from fastapi import APIRouter, Depends
-
 from src.application_container import AppContainer
-from src.controller.model.health import HealthResponse, get_health_responses
-from src.service.health import HealthService
+from src.controller.dto.health_dto import (HealthResponseDto,
+                                           get_health_responses)
+from src.service.health_service import HealthService
 from src.utils.api_exceptions import ServerErrorException
 
 logger = logging.getLogger(__name__)
@@ -36,4 +36,4 @@ async def get_health(
             extra="The application isn't ready to work as expected"
         )
 
-    return HealthResponse(ok=True)
+    return HealthResponseDto(ok=True)

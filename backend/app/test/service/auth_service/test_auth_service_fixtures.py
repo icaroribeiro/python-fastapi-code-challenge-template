@@ -2,9 +2,8 @@ from unittest.mock import MagicMock
 
 import pytest
 from faker import Faker
-
-from src.domain.repository.auth import AuthRepository
-from src.service.auth import AuthService
+from src.domain.repository.auth_repository import AuthRepository
+from src.service.auth_service import AuthService
 
 
 class TestAuthServiceFixtures:
