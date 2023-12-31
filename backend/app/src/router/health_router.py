@@ -3,7 +3,7 @@ import logging
 from dependency_injector.wiring import Provide, inject
 from fastapi import APIRouter, Depends
 from src.application_container import AppContainer
-from src.controller.dto.health_response_dto import (
+from src.router.dto.health_response_dto import (
     HealthResponseDto,
     get_health_responses,
 )

@@ -1,5 +1,7 @@
-from controller.dto.error_response_dto import ErrorResponseDto
-from src.controller.dto.user_credentials_dto import UserCredentialsDto
+from fastapi import status
+
+from src.router.dto.error_response_dto import ErrorResponseDto
+from src.router.dto.user_credentials_dto import UserCredentialsDto
 
 
 class SignUpResponseDto(UserCredentialsDto):

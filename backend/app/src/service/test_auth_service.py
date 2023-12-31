@@ -2,11 +2,12 @@ from unittest.mock import MagicMock
 
 import pytest
 from faker import Faker
-from src.domain.repository.auth_repository import AuthRepository
+
+from src.infrastructure.repository.auth_repository import AuthRepository
 from src.service.auth_service import AuthService
 
 
-class TestAuthServiceFixtures:
+class TestFixtures:
     @pytest.fixture
     def fake(self) -> Faker:
         return Faker()
@@ -23,3 +24,13 @@ class TestAuthServiceFixtures:
         return AuthService(
             auth_repository=auth_repository,
         )
+
+
+class TestSaveAuth(TestFixtures):
+    def test_1(
+        self,
+        auth_repository: AuthRepository,
+        auth_service: AuthService,
+        fake: Faker,
+    ):
+        pass

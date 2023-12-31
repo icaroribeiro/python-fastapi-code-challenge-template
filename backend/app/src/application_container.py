@@ -1,5 +1,5 @@
 from dependency_injector import containers, providers
-from src.domain.repository.auth_repository import AuthRepository
+from src.infrastructure.repository.auth_repository import AuthRepository
 from src.infrastructure.database.database_session_manager import DatabaseSessionManager
 from src.service.auth_service import AuthService
 from src.service.health_service import HealthService

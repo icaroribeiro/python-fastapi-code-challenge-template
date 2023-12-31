@@ -2,8 +2,8 @@ from dependency_injector.wiring import Provide, inject
 from fastapi import APIRouter, Depends, status
 from fastapi.logger import logger
 from src.application_container import AppContainer
-from src.controller.dto.sign_up_request_dto import SignUpRequestDto
-from src.controller.dto.sign_up_response_dto import SignUpResponseDto, sign_up_responses
+from src.router.dto.sign_up_request_dto import SignUpRequestDto
+from src.router.dto.sign_up_response_dto import SignUpResponseDto, sign_up_responses
 from src.domain.model.auth import Auth
 from src.service.auth_service import AuthService
 from src.utils.api_exceptions import ServerErrorException

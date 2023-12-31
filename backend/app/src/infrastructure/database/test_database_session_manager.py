@@ -2,12 +2,11 @@ import pytest
 from sqlalchemy import delete
 
 from src import build_db_conn_string
-from src.domain.model.auth import Auth
 from src.infrastructure.database import Base
 from src.infrastructure.database.database_session_manager import DatabaseSessionManager
 
 
-class TestDatabaseSessionManagerFixtures:
+class TestDatabaseSessionManager:
     @pytest.fixture
     async def database_session_manager(self):
         conn_string = build_db_conn_string()

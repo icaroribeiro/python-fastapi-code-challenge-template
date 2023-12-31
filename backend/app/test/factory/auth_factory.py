@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from factory import LazyAttribute, BUILD_STRATEGY, Factory
+from factory import BUILD_STRATEGY, Factory, LazyAttribute
 from faker import Faker
 from src.domain.model.auth import Auth
 

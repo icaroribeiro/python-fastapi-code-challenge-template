@@ -1,14 +1,21 @@
-from test.controller.router.health_router.test_health_router_fixtures import \
-    TestHealthRouterFixtures
-
 import pytest
 from fastapi import status
 from fastapi.encoders import jsonable_encoder
 from httpx import AsyncClient
-from src.controller.dto.health_response_dto import HealthResponseDto
+
+from src.router.dto.health_response_dto import HealthResponseDto
+from src.infrastructure.database.test_database_session_manager import (
+    TestDatabaseSessionManager,
+)
 
 
-class TestGetHealthGet(TestHealthRouterFixtures):
+class TestFixtures(TestDatabaseSessionManager):
+    @pytest.fixture
+    def get_health_endpoint(self) -> str:
+        return "/health"
+
+
+class TestGetHealth(TestFixtures):
     @pytest.fixture
     def endpoint(self, get_health_endpoint: str) -> str:
         return get_health_endpoint

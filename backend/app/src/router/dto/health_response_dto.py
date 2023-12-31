@@ -1,6 +1,6 @@
 from fastapi import status
 from pydantic import BaseModel
-from src.controller.dto.error_response_dto import ErrorResponseDto
+from src.router.dto.error_response_dto import ErrorResponseDto
 
 
 class HealthResponseDto(BaseModel):

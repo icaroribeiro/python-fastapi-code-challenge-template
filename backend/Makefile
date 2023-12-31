@@ -41,13 +41,13 @@ run-app:
 test-app:
 	cd ./app; \
 	. ./setup_env.sh; \
-	poetry run pytest --no-cov-on-fail --cov-fail-under=50 -v test
+	poetry run pytest --no-cov-on-fail --cov-fail-under=50 -v src test
 
 
 check-app-coverage:
 	cd ./app; \
 	. ./setup_env.sh; \
-	poetry run pytest --cov=src --no-cov-on-fail -v test
+	poetry run pytest --cov=src --no-cov-on-fail -v src test
 
 
 #
@@ -87,9 +87,9 @@ finish-dockerized-app-dependencies:
 
 test-dockerized-app:
 	cd ./app; \
-	docker exec --env-file .env app-container poetry run pytest --no-cov-on-fail --cov-fail-under=50 -v test
+	docker exec --env-file .env app-container poetry run pytest --no-cov-on-fail --cov-fail-under=50 -v src test
 
 
 check-dockerized-app-coverage:
 	cd ./app; \
-	docker exec --env-file .env app-container poetry run pytest --cov=src --no-cov-on-fail -v test
+	docker exec --env-file .env app-container poetry run pytest --cov=src --no-cov-on-fail -v src test
