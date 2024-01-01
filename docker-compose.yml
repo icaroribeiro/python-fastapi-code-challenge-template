@@ -23,7 +23,7 @@ services:
       - ./backend/db/.env
     restart: on-failure
     ports:
-      - "5433:5432"
+      - "5434:5432"
     volumes:
       - db-container-data:/var/lib/postgresql/data
 

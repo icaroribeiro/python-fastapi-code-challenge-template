@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a014f106-8f49-4928-ac28-8eaf87a5d035" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/.env.prod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/.env.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/python-fastapi-code-challenge-template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python-fastapi-code-challenge-template.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/setup_env.sh" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/setup_env.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/src/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/src/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/src/application_container.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/src/application_container.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/src/domain/model/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/src/domain/model/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/src/domain/model/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/src/domain/model/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/src/infrastructure/application_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/src/infrastructure/application_settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/src/infrastructure/database/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/src/infrastructure/database/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/src/infrastructure/database/test_database_session_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/src/infrastructure/database/test_database_session_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/src/router/auth_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/src/router/auth_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/src/router/dto/sign_up_response_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/src/router/dto/sign_up_response_dto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/src/router/health_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/src/router/health_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/src/service/health_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/src/service/health_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/src/service/test_health_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/src/service/test_health_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/test/e2e/test_health_e2e.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/test/e2e/test_health_e2e.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/db/sql/1-create_auth_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2aKHU4hKhxoS2X3MuTecbZhsDqf" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.pytest for e2e.test_health_e2e.TestGetHealth.test_get_status_should_succeed_in_getting_the_status.executor": "Run",
+    "Python tests.pytest for test_health_service.TestCheckHealth.test_should_succeed_in_checking_the_health.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Python/workspace/github/watchers.xml",
+    "settings.editor.selected.configurable": "watcher.settings"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Python\workspace\github\python-fastapi-code-challenge-template\backend\app" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.pytest for e2e.test_health_e2e.TestGetHealth.test_get_status_should_succeed_in_getting_the_status">
+    <configuration name="pytest for e2e.test_health_e2e.TestGetHealth.test_get_status_should_succeed_in_getting_the_status" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="python-fastapi-code-challenge-template" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend/app/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;e2e.test_health_e2e.TestGetHealth.test_get_status_should_succeed_in_getting_the_status&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_health_service.TestCheckHealth.test_should_succeed_in_checking_the_health" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="python-fastapi-code-challenge-template" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend/app/src/service" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_health_service.TestCheckHealth.test_should_succeed_in_checking_the_health&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.pytest for e2e.test_health_e2e.TestGetHealth.test_get_status_should_succeed_in_getting_the_status" />
+        <item itemvalue="Python tests.pytest for test_health_service.TestCheckHealth.test_should_succeed_in_checking_the_health" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-50da183f06c8-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13135.95" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a014f106-8f49-4928-ac28-8eaf87a5d035" name="Changes" comment="" />
+      <created>1704060362204</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1704060362204</updated>
+    </task>
+    <servers />
+  </component>
+</project>

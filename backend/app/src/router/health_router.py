@@ -3,10 +3,7 @@ import logging
 from dependency_injector.wiring import Provide, inject
 from fastapi import APIRouter, Depends
 from src.application_container import AppContainer
-from src.router.dto.health_response_dto import (
-    HealthResponseDto,
-    get_health_responses,
-)
+from src.router.dto.health_response_dto import HealthResponseDto, get_health_responses
 from src.service.health_service import HealthService
 from src.utils.api_exceptions import ServerErrorException
 
@@ -31,11 +28,14 @@ async def get_health(
     ),
 ):
     try:
-        await health_service.check_health()
+        is_healthy = await health_service.check_health()
     except Exception as ex:
         logger.error(f"Failed to check application's health: ${str(ex)}")
         raise ServerErrorException(
             extra="The application isn't ready to work as expected"
         )
 
-    return HealthResponseDto(ok=True)
+    if is_healthy:
+        return HealthResponseDto(ok=True)
+
+    return HealthResponseDto(ok=False)

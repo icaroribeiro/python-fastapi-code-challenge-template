@@ -13,7 +13,7 @@ class TestFixtures(TestDatabaseSessionManager):
 
 
 class TestCheckHealth(TestFixtures):
-    async def test_should_succeed_in_checking_the_health(
+    async def test_returns_true_when_application_is_healthy(
         self, health_service: HealthService
     ):
         result = await health_service.check_health()

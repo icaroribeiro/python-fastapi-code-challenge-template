@@ -16,6 +16,7 @@ dependency-injector = "^4.41.0"
 passlib = "^1.7.4"
 bcrypt = "3.2.2"
 email-validator = "^2.1.0"
+alembic = "^1.13.1"
 
 [tool.poetry.dev-dependencies]
 black = "^23.11.0"

@@ -20,7 +20,7 @@ class Default:
     updated_at = Column(
         "updated_at",
         DateTime(),
-        nullable=False,
+        nullable=True,
         default=None,
         onupdate=datetime.utcnow(),
     )

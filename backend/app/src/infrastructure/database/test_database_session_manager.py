@@ -1,15 +1,15 @@
 import pytest
 from sqlalchemy import delete
-
-from src import build_db_conn_string
+from src import get_database_url
 from src.infrastructure.database import Base
-from src.infrastructure.database.database_session_manager import DatabaseSessionManager
+from src.infrastructure.database.database_session_manager import \
+    DatabaseSessionManager
 
 
 class TestDatabaseSessionManager:
     @pytest.fixture
     async def database_session_manager(self):
-        conn_string = build_db_conn_string()
+        conn_string = get_database_url()
         database_session_manager = DatabaseSessionManager(conn_string=conn_string)
         yield database_session_manager
         async with database_session_manager.connect() as connection:

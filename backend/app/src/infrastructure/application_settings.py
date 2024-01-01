@@ -7,28 +7,35 @@ class ApplicationSettings:
         return self.get(key="HTTP_PORT", default_value="5000")
 
     @property
-    def db_driver(self) -> str:
-        return self.get(key="DB_DRIVER", default_value="postgresql+asyncpg")
+    def database_driver(self) -> str:
+        return self.get(key="DATABASE_DRIVER", default_value="postgresql+asyncpg")
 
     @property
-    def db_user(self) -> str:
-        return self.get(key="DB_USER", default_value="root")
+    def database_user(self) -> str:
+        return self.get(key="DATABASE_USER", default_value="root")
 
     @property
-    def db_password(self) -> str:
-        return self.get(key="DB_PASSWORD", default_value="root")
+    def database_password(self) -> str:
+        return self.get(key="DATABASE_PASSWORD", default_value="root")
 
     @property
-    def db_host(self) -> str:
-        return self.get(key="DB_HOST", default_value="localhost")
+    def database_host(self) -> str:
+        return self.get(key="DATABASE_HOST", default_value="localhost")
 
     @property
-    def db_port(self) -> str:
-        return self.get(key="DB_PORT", default_value="5433")
+    def database_port(self) -> str:
+        return self.get(key="DATABASE_PORT", default_value="5433")
 
     @property
-    def db_name(self) -> str:
-        return self.get(key="DB_NAME", default_value="db")
+    def database_name(self) -> str:
+        return self.get(key="DATABASE_NAME", default_value="db")
+
+    @property
+    def database_url(self) -> str:
+        return self.get(
+            key="DATABASE_URL",
+            default_value="postgresql+asyncpg://root:root@localhost:5433/db",
+        )
 
     @staticmethod
     def get(key, default_value: str = None) -> str:

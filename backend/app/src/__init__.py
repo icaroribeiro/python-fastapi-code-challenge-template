@@ -1,11 +1,11 @@
 from fastapi import FastAPI
 from fastapi.exceptions import RequestValidationError
 from src.application_container import AppContainer, Core
+from src.infrastructure.database import get_database_url
 from src.router import auth_router as auth_router_module
 from src.router import health_router as health_router_module
 from src.router.auth_router import auth_router, auth_tag
 from src.router.health_router import health_router, health_tag
-from src.infrastructure.database import build_db_conn_string
 from src.utils.api_exceptions import (
     ApiException,
     handle_api_exceptions,
@@ -14,8 +14,8 @@ from src.utils.api_exceptions import (
 
 
 def create_app() -> FastAPI:
-    db_conn_string = build_db_conn_string()
-    Core.config.override({"db_conn_string": db_conn_string})
+    database_url = get_database_url()
+    Core.config.override({"database_url": database_url})
 
     container = AppContainer()
     container.wire(modules=[health_router_module])

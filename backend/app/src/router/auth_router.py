@@ -2,9 +2,9 @@ from dependency_injector.wiring import Provide, inject
 from fastapi import APIRouter, Depends, status
 from fastapi.logger import logger
 from src.application_container import AppContainer
+from src.domain.model.auth import Auth
 from src.router.dto.sign_up_request_dto import SignUpRequestDto
 from src.router.dto.sign_up_response_dto import SignUpResponseDto, sign_up_responses
-from src.domain.model.auth import Auth
 from src.service.auth_service import AuthService
 from src.utils.api_exceptions import ServerErrorException
 from src.utils.security import get_hashed_password
@@ -29,6 +29,7 @@ async def sign_up(
         auth = Auth()
         auth.username = sign_up_request.username
         auth.password = get_hashed_password(password=sign_up_request.password)
+
         created_auth = await auth_service.save_auth(auth=auth)
     except Exception as ex:
         logger.error(f"Failed to sign up: ${str(ex)}")

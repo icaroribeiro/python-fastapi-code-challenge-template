@@ -2,11 +2,10 @@ import pytest
 from fastapi import status
 from fastapi.encoders import jsonable_encoder
 from httpx import AsyncClient
-
-from src.router.dto.health_response_dto import HealthResponseDto
 from src.infrastructure.database.test_database_session_manager import (
     TestDatabaseSessionManager,
 )
+from src.router.dto.health_response_dto import HealthResponseDto
 
 
 class TestFixtures(TestDatabaseSessionManager):
@@ -20,7 +19,7 @@ class TestGetHealth(TestFixtures):
     def endpoint(self, get_health_endpoint: str) -> str:
         return get_health_endpoint
 
-    async def test_get_status_should_succeed_in_getting_the_status(
+    async def test_returns_health_response_with_true_if_the_application_is_healthy(
         self,
         app_client: AsyncClient,
         endpoint: str,

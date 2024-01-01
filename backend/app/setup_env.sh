@@ -4,9 +4,10 @@ export PYTHONPATH="$PWD"
 
 export HTTP_PORT="5000"
 
-export DB_DRIVER="postgresql+asyncpg"
-export DB_USER="root"
-export DB_PASSWORD="root"
-export DB_HOST="localhost"
-export DB_PORT="5433"
-export DB_NAME="db"
+export DATABASE_DRIVER="postgresql+asyncpg"
+export DATABASE_USER="root"
+export DATABASE_PASSWORD="root"
+export DATABASE_HOST="localhost"
+export DATABASE_PORT="5433"
+export DATABASE_NAME="db"
+export DATABASE_URL=${DATABASE_DRIVER}://${DATABASE_USER}:${DATABASE_PASSWORD}@${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_NAME}

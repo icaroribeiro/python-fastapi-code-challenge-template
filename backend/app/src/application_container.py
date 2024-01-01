@@ -1,6 +1,6 @@
 from dependency_injector import containers, providers
-from src.infrastructure.repository.auth_repository import AuthRepository
 from src.infrastructure.database.database_session_manager import DatabaseSessionManager
+from src.infrastructure.repository.auth_repository import AuthRepository
 from src.service.auth_service import AuthService
 from src.service.health_service import HealthService
 
@@ -18,7 +18,7 @@ class Core(containers.DeclarativeContainer):
 class InfrastructureContainer(containers.DeclarativeContainer):
     config = providers.Configuration()
 
-    session = providers.Resource(session_factory, conn_string=config.db_conn_string)
+    session = providers.Resource(session_factory, conn_string=config.database_url)
 
 
 class RepositoryContainer(containers.DeclarativeContainer):
@@ -36,7 +36,7 @@ class ServiceContainer(containers.DeclarativeContainer):
 
     auth_service = providers.Factory(
         AuthService,
-        auth_repository=repository.auth_repository_repository,
+        auth_repository=repository.auth_repository,
     )
 
 

@@ -1,11 +1,10 @@
 from fastapi import status
-
+from pydantic import BaseModel
 from src.router.dto.error_response_dto import ErrorResponseDto
-from src.router.dto.user_credentials_dto import UserCredentialsDto
 
 
-class SignUpResponseDto(UserCredentialsDto):
-    pass
+class SignUpResponseDto(BaseModel):
+    ok: bool
 
 
 sign_up_responses = {
